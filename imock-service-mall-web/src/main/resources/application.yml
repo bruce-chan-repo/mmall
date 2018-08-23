@@ -1,0 +1,26 @@
+server:
+  port: 8080
+  context-path: /mmall
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+        url: jdbc:mysql://localhost:3306/mmall?characterEncoding=utf-8
+        driver-class-name: com.mysql.jdbc.Driver
+        username: root
+        password: root
+        initial-size: 5
+        max-active: 22
+        min-idel: 5
+        max-wait: 60000
+        time-between-eviction-runs-millis: 60000
+        validation-query: SELECT 1 FROM DUAL
+        test-while-idle: true
+        test-on-borrow: false
+        test-on-return: false
+  redis:
+    port: 6379
+    host: 182.61.18.96
+    timeout: 60000
+mybatis:
+  mapper-locations: classpath:/mapper/*.xml
