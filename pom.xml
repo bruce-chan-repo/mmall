@@ -3,18 +3,45 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
+	<!-- 构件信息 GAV -->
 	<groupId>com.imock.mmall</groupId>
 	<artifactId>mmall</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-    <modules>
+	<!-- 打包的方式，常用的有[pom、jar、war] -->
+	<packaging>pom</packaging>
+
+	<!-- 模块列表 -->
+	<modules>
 		<module>imock-service-mall-dao</module>
 		<module>imock-service-mall-web</module>
 	</modules>
-    <packaging>pom</packaging>
 
+	<!-- 项目信息 -->
 	<name>mmall</name>
-	<description>Demo project for Spring Boot</description>
+	<description>project of mall</description>
+	<url>http://localhost:8080/mmall/</url>
+	<inceptionYear>2018-10-11</inceptionYear>
 
+	<!-- 组织信息 -->
+	<organization>
+		<name>MyCompany</name>
+		<url>www.oldchen.com</url>
+	</organization>
+
+	<!-- 开发者列表 -->
+	<developers>
+		<developer>
+			<id>victor</id>
+			<name>Chen Kj</name>
+			<email>15532027713@163.com</email>
+			<timezone>+8</timezone>
+			<roles>
+				<role>developer</role>
+			</roles>
+		</developer>
+	</developers>
+
+	<!-- 指定父级pom -->
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
@@ -22,6 +49,7 @@
 		<relativePath/>
 	</parent>
 
+	<!-- 属性列表，可以在pom.xml任意地方引用. -->
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -33,6 +61,7 @@
 		<pagehelper.version>5.1.2</pagehelper.version>
 	</properties>
 
+	<!-- 项目依赖 -->
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -50,11 +79,9 @@
 			<artifactId>mysql-connector-java</artifactId>
 			<version>${mysql.version}</version>
 		</dependency>
-
-
 	</dependencies>
 
-	<!-- 规定依赖包的版本，但不会导入该依赖. -->
+	<!-- 声明依赖包的版本，但不会导入该依赖. -->
 	<dependencyManagement>
 		<dependencies>
 			<!-- druid数据源． -->
@@ -64,7 +91,7 @@
 				<version>${druid.version}</version>
 			</dependency>
 
-			<!-- gson工具包. -->
+			<!-- GSON工具包. -->
 			<dependency>
 				<groupId>com.google.code.gson</groupId>
 				<artifactId>gson</artifactId>

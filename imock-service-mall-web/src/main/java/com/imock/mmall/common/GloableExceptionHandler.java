@@ -6,8 +6,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
- * TODO
- *
+ * 全局异常控制类
  * @author: Chen Kj
  * @date: 2018/8/21 17:29
  * @version: 1.0

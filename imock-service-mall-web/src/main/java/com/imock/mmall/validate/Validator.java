@@ -1,11 +1,10 @@
-package com.imock.mmall.common;
+package com.imock.mmall.validate;
 
 import java.util.List;
 import java.util.Map;
 
 /**
  * 校验器
- *
  * @author: Chen Kj
  * @date: 2018/6/29 9:22
  * @version: 1.0
@@ -27,5 +26,4 @@ public interface Validator {
     String getAllError();
 
     Map<String, String> getError();
-
 }
